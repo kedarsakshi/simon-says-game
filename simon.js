@@ -9,6 +9,7 @@ let level=0;
 let started=false;
 let h2=document.querySelector("h2");
 
+//game start when any key is press
 document.addEventListener("keypress",function(){
     if(started==false){
     console.log("game started");
@@ -54,6 +55,7 @@ function levelup(){
     gameflash(randombtn);
 }
 
+//to check user sequence
 function checkans(idx){
  
 
@@ -73,6 +75,7 @@ function checkans(idx){
     }
 }
 
+
 function btnpress(){
    
     let btn=this;
@@ -87,9 +90,11 @@ for(btn of allbtns){
     btn.addEventListener("click",btnpress);
 }
 
+//reset game after gameOver
 function reset(){
      started=false;
      gameseq=[];
     userseq=[];
     level=0;
+
 }
